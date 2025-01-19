@@ -1,0 +1,391 @@
+a{
+    text-decoration: none;
+}
+/* General Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #017efc; /* Dark navy background */
+    padding: 5px 10px;
+    color: rgb(223, 25, 25);
+    font-family: Arial, sans-serif;
+}
+
+/* Logo */
+.navbar-left .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ecf0f1; /* Light text color */
+    text-decoration: none;
+}
+
+/* Center Navigation Links */
+.navbar-center {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f1c40f; /* Highlight color on hover */
+}
+
+/* Right Section for Profile and Dropdown */
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right h3 {
+    margin-right: 10px;
+    color: #ecf0f1;
+}
+
+.navbar-right ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #07a6ea; /* Slightly darker background for dropdown */
+    border-radius: 5px;
+    padding: 10px;
+    display: none; /* Initially hidden for dropdown */
+    position: absolute;
+    top: 40px; /* Adjust for dropdown placement */
+    right: 10px; /* Align to the right */
+    z-index: 1000;
+}
+
+.navbar-right li {
+    margin: 5px 0;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    color: #f1c40f;
+}
+
+/* Icons */
+.navbar-right i {
+    font-size: 13px;
+}
+
+/* Dropdown on Hover */
+.navbar-right:hover ul {
+    display: flex;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-center {
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-right ul {
+        position: static;
+    }
+}
+
+/* Map Section Styling */
+.map-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+}
+
+/* Map Container */
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Search Bar Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-bar {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Bootstrap blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .map-container {
+        height: 300px;
+    }
+
+    .search-bar {
+        width: 70%;
+    }
+
+    .search-button {
+        font-size: 14px;
+    }
+}
+
+/* Vehicles Section */
+.vehicles {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background */
+    text-align: center;
+}
+
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.vehicle-cards {
+    display: inline-flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.vehicle-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.vehicle-card .info {
+    padding: 15px;
+}
+
+.vehicle-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.vehicle-card p {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+}
+
+.vehicle-card .price {
+    font-size: 16px;
+    color: #007bff; /* Bootstrap blue for price */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.vehicle-card button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.vehicle-card button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Scrollbar Styling */
+.scroll-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 5px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vehicle-card {
+        width: 200px;
+    }
+
+    .vehicle-card img {
+        height: 120px;
+    }
+
+    .vehicle-card h3 {
+        font-size: 16px;
+    }
+
+    .vehicle-card p {
+        font-size: 12px;
+    }
+
+    .vehicle-card button {
+        font-size: 12px;
+    }
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.how-it-works p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.step {
+    text-align: center;
+    width: 200px;
+}
+
+.step img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer .footer-content div {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer .footer-content h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer .footer-content p,
+footer .footer-content a {
+    font-size: 14px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer .footer-content a:hover {
+    color: #00bcd4;
+}
